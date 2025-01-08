@@ -39,10 +39,10 @@ window.onload = () => {
     // No mostrar contenido inicial
     contentDiv.innerHTML = '';
 
-    // Cargar contenido de inicio/index.html al presionar el botón "Materiales"
+    // Cargar contenido de materiales/index.html al presionar el botón "Materiales"
     document.querySelector('a[data-file="materiales/index.html"]').addEventListener('click', (event) => {
         event.preventDefault();
-        loadContent('inicio/index.html');
+        loadContent('materiales/index.html');
     });
 
     // Provisional: Cargar contenido de ejemplo para los demás botones
