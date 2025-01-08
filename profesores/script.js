@@ -13,7 +13,7 @@ window.onload = () => {
     // Botón de cierre de sesión
     document.getElementById('logout-button').addEventListener('click', () => {
         localStorage.removeItem('user');
-        window.location.href = 'https://arieldiaz11777.github.io/aulavirtual/';
+        window.location.href = '/aulavirtual/index.html';
     });
 
     // Función para cargar contenido dinámico
