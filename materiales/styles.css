@@ -138,7 +138,7 @@ form {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 20px auto 0; /* Ajustar margen superior a 20px */
     width: 100%;
     position: relative; /* Cambiar a absolute si es necesario */
     top: 0; /* Ajustar este valor para mover el formulario hacia arriba o abajo */
