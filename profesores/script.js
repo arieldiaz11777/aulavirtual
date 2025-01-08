@@ -13,7 +13,7 @@ window.onload = () => {
     // Botón de cierre de sesión
     document.getElementById('logout-button').addEventListener('click', () => {
         localStorage.removeItem('user');
-        window.location.href = '/aulavirtual/index.html';
+        window.location.href = 'index.html';
     });
 
     // Función para cargar contenido dinámico
