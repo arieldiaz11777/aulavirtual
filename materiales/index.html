@@ -1,1 +1,35 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargar Materiales</title>
+</head>
+<body>
+    <h1>Cargar Materiales</h1>
+    <form id="materialForm">
+        <label for="curso">Curso:</label><br>
+        <input type="text" id="curso" name="curso" required><br><br>
+
+        <label for="numeroClase">Número de Clase:</label><br>
+        <input type="number" id="numeroClase" name="numeroClase" required><br><br>
+
+        <label for="video">Video (URL):</label><br>
+        <input type="url" id="video" name="video" required><br><br>
+
+        <label for="materiales">Materiales:</label><br>
+        <textarea id="materiales" name="materiales" required></textarea><br><br>
+
+        <label for="fechaClase">Fecha de Clase:</label><br>
+        <input type="date" id="fechaClase" name="fechaClase" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
