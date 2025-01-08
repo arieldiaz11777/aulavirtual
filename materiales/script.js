@@ -34,15 +34,10 @@ form.addEventListener('submit', async (e) => {
             mode: 'no-cors' // Solución temporal para evitar CORS
         });
 
-        // Validamos la respuesta
-        if (response.ok) {
-            messageContainer.textContent = 'Datos enviados correctamente a Google Sheets';
-            messageContainer.style.color = 'green';
-            form.reset(); // Reseteamos el formulario
-        } else {
-            messageContainer.textContent = 'Error al enviar los datos';
-            messageContainer.style.color = 'red';
-        }
+        // Asumimos que la solicitud fue exitosa ya que no podemos verificar la respuesta con no-cors
+        messageContainer.textContent = 'Datos enviados correctamente a Google Sheets';
+        messageContainer.style.color = 'green';
+        form.reset(); // Reseteamos el formulario
     } catch (error) {
         messageContainer.textContent = 'Hubo un error: ' + error.message;
         messageContainer.style.color = 'red';
