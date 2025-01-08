@@ -13,7 +13,7 @@ window.onload = () => {
     // Botón de cierre de sesión
     document.getElementById('logout-button').addEventListener('click', () => {
         localStorage.removeItem('user');
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
     });
 
     // Función para cargar contenido dinámico
@@ -37,7 +37,7 @@ window.onload = () => {
             // Cargar el script específico del contenido cargado
             if (filePath.includes('materiales/index.html')) {
                 const script = document.createElement('script');
-                script.src = `/static/js/materiales.js`;
+                script.src = `../static/js/materiales.js`;
                 document.body.appendChild(script);
             }
         } catch (error) {
