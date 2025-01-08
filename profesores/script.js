@@ -20,25 +20,22 @@ window.onload = () => {
     const contentDiv = document.getElementById('dynamic-content');
 
     // Función para cargar contenido HTML
-    const loadContent = (filePath) => {
-        fetch(`../${filePath}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Error al cargar el archivo');
-                }
-                return response.text();
-            })
-            .then(data => {
-                contentDiv.innerHTML = `<div class="auto-adjustable-container">${data}</div>`;
-                // Aplicar el CSS específico del contenido cargado
-                const link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.href = `../${filePath.replace('.html', '/styles.css')}`;
-                document.head.appendChild(link);
-            })
-            .catch(error => {
-                contentDiv.innerHTML = `<div class="auto-adjustable-container"><p>Error al cargar el contenido: ${error.message}</p></div>`;
-            });
+    const loadContent = async (filePath) => {
+        try {
+            const response = await fetch(`../${filePath}`);
+            if (!response.ok) {
+                throw new Error('Error al cargar el archivo');
+            }
+            const data = await response.text();
+            contentDiv.innerHTML = `<div class="auto-adjustable-container">${data}</div>`;
+            // Aplicar el CSS específico del contenido cargado
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = `../${filePath.replace('.html', '/styles.css')}`;
+            document.head.appendChild(link);
+        } catch (error) {
+            contentDiv.innerHTML = `<div class="auto-adjustable-container"><p>Error al cargar el contenido: ${error.message}</p></div>`;
+        }
     };
 
     // No mostrar contenido inicial
