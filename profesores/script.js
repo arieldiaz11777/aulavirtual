@@ -33,6 +33,13 @@ window.onload = () => {
             link.rel = 'stylesheet';
             link.href = `../${filePath.replace('.html', '/styles.css')}`;
             document.head.appendChild(link);
+
+            // Cargar el script específico del contenido cargado
+            if (filePath.includes('materiales/index.html')) {
+                const script = document.createElement('script');
+                script.src = `../materiales/script.js`;
+                document.body.appendChild(script);
+            }
         } catch (error) {
             contentDiv.innerHTML = `<div class="auto-adjustable-container"><p>Error al cargar el contenido: ${error.message}</p></div>`;
         }
