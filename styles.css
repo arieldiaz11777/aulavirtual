@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('foto.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    flex-direction: column;
+}
+
+.container {
+    background-color: rgb(76 175 80 / 29%); /* Soft green with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    display: none; /* Hide button initially */
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #26922b8a; /* Green color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Ensure button is below the text */
+}
+
+button:hover {
+    background-color: #18a41f;
+}
