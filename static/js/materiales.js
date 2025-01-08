@@ -33,10 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(data),
-                    mode: 'no-cors' // Solución temporal para evitar CORS
                 });
 
-                // Asumimos que la solicitud fue exitosa ya que no podemos verificar la respuesta con no-cors
+                if (!response.ok) {
+                    throw new Error(`Error ${response.status}: ${response.statusText}`);
+                }
+
+                // Asumimos que la solicitud fue exitosa
                 messageContainer.textContent = 'Datos enviados correctamente a Google Sheets';
                 messageContainer.style.color = 'green';
                 form.reset(); // Reseteamos el formulario
