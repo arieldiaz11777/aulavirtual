@@ -2,9 +2,9 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
     height: 100vh;
     background: url("/foto.png") center center / cover no-repeat fixed;
@@ -12,9 +12,9 @@ body {
     flex-direction: column;
     justify-content: center;
     overflow-y: auto;
-}
-
-.container {
+  }
+  
+  .container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -26,9 +26,9 @@ body {
     background-color: rgba(144, 238, 144, 0.07);
     margin: 20px auto;
     justify-content: center;
-}
-
-.main-content {
+  }
+  
+  .main-content {
     flex-grow: 1;
     background-color: rgba(255, 255, 255, 0.35);
     padding: 20px;
@@ -38,9 +38,9 @@ body {
     overflow-y: auto;
     margin: 0;
     justify-content: center;
-}
-
-.header {
+  }
+  
+  .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,69 +55,69 @@ body {
     width: 90%;
     z-index: 1000;
     gap: 20px;
-}
-
-.header a {
+  }
+  
+  .header a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     padding: 10px 15px;
     border-radius: 5px;
     transition: background 0.3s;
     background-color: rgba(34, 139, 34, 0.47);
-}
-
-.header a#logout-button {
+  }
+  
+  .header a#logout-button {
     background-color: red;
     color: white;
-}
-
-.header a:hover {
+  }
+  
+  .header a:hover {
     background-color: rgba(60, 179, 113, 0.8);
-}
-
-.profile {
+  }
+  
+  .profile {
     display: flex;
     align-items: center;
     gap: 15px;
-}
-
-#profile-pic {
+  }
+  
+  #profile-pic {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
-}
-
-#user-name {
+  }
+  
+  #user-name {
     font-size: 18px;
     font-weight: bold;
     color: rgb(255, 255, 255);
-}
-
-#user-email {
+  }
+  
+  #user-email {
     font-size: 14px;
     color: rgb(254, 254, 254);
-}
-
-.content {
+  }
+  
+  .content {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.content h1 {
+  }
+  
+  .content h1 {
     font-size: 32px;
     margin-bottom: 10px;
-}
-
-.content p {
+  }
+  
+  .content p {
     font-size: 18px;
     color: rgb(0, 0, 0);
-}
-
-.auto-adjustable-container {
+  }
+  
+  .auto-adjustable-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -126,10 +126,10 @@ body {
     justify-content: center;
     padding: 20px;
     box-sizing: border-box;
-}
-
-/* Modificar la posición del formulario */
-form {
+  }
+  
+  /* Modificar la posición del formulario */
+  form {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -138,40 +138,44 @@ form {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     max-width: 1000px;
-    margin: 20px auto 0; /* Ajustar margen superior a 20px */
+    margin: 20px auto 0;
+    /* Ajustar margen superior a 20px */
     width: 100%;
-    position: relative; /* Cambiar a absolute si es necesario */
-    top: 0; /* Ajustar este valor para mover el formulario hacia arriba o abajo */
-}
-
-.form-row {
+    position: relative;
+    /* Cambiar a absolute si es necesario */
+    top: 0;
+    /* Ajustar este valor para mover el formulario hacia arriba o abajo */
+  }
+  
+  .form-row {
     display: flex;
     gap: 15px;
-}
-
-.form-group {
+  }
+  
+  .form-group {
     display: flex;
     flex-direction: column;
     width: 100%;
-}
-
-form label {
+  }
+  
+  form label {
     font-size: 16px;
     font-weight: bold;
     color: #333;
     margin-bottom: 5px;
-}
-
-form input, form textarea {
+  }
+  
+  form input,
+  form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
     box-sizing: border-box;
-}
-
-form button {
+  }
+  
+  form button {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -181,8 +185,8 @@ form button {
     cursor: pointer;
     transition: background-color 0.3s;
     align-self: flex-start;
-}
-
-form button:hover {
+  }
+  
+  form button:hover {
     background-color: #2E8B57;
-}
+  }
