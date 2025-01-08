@@ -1,0 +1,158 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background: url("/foto.png") center center / cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    overflow-y: auto; /* Habilitar desplazamiento vertical */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Ajustar a diseño de columna */
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh; /* Altura completa de la ventana */
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.69) 0px 8px 30px;
+    overflow: hidden;
+    background-color: rgba(144, 238, 144, 0.07);
+    margin: 20px auto; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+}
+
+/* Eliminar estilos de la barra lateral */
+.sidebar {
+    display: none;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar a#logout-button {
+    background-color: red; /* Fondo rojo */
+    color: white; /* Texto blanco */
+}
+
+.sidebar a:hover {
+    background-color: rgba(60, 179, 113, 0.8);
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.35);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 15px;
+    overflow-y: auto; /* Habilitar desplazamiento para el contenido */
+    margin: 0; /* Ajustar margen */
+    justify-content: center; /* Centrar verticalmente */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(7, 10, 7, 0.43);
+    padding: 10px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    position: fixed; /* Fijar encabezado en la parte superior */
+    top: 0;
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Ajustar posición */
+    width: calc(100% - 40px); /* Ajustar ancho */
+    z-index: 1000; /* Asegurar que el encabezado esté sobre otro contenido */
+    gap: 20px; /* Añadir espacio entre botones */
+}
+
+/* Añadir estilos para los nuevos botones en el encabezado */
+.header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    background-color: rgba(34, 139, 34, 0.47);
+}
+
+.header a#logout-button {
+    background-color: red; /* Fondo rojo */
+    color: white; /* Texto blanco */
+}
+
+.header a:hover {
+    background-color: rgba(60, 179, 113, 0.8);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#user-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 255, 255); /* Cambiar color a blanco */
+}
+
+#user-email {
+    font-size: 14px;
+    color: rgb(254, 254, 254);
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+.auto-adjustable-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
