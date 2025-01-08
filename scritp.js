@@ -50,7 +50,7 @@ const signInWithGoogle = () => {
       // Guardar información del usuario en localStorage
       localStorage.setItem('user', JSON.stringify(user));
       // Redirigir al usuario a aula/index.html
-      window.location.href = '../profesores/index.html';
+      window.location.href = 'profesores/index.html';
     })
     .catch((error) => {
       // Manejo de errores
