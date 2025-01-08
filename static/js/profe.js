@@ -37,7 +37,7 @@ window.onload = () => {
             // Cargar el script específico del contenido cargado
             if (filePath.includes('materiales/index.html')) {
                 const script = document.createElement('script');
-                script.src = `../materiales/script.js`;
+                script.src = `/static/js/materiales.js`;
                 document.body.appendChild(script);
             }
         } catch (error) {
