@@ -27,13 +27,26 @@
         </div>
 
         <!-- Contenido Principal -->
-        <div class="main-content">
+        <div class="main-content" id="dynamic-content">
             <h1>Bienvenido al Aula Virtual</h1>
             <p>Aquí encontrarás tus clases, tareas y recursos educativos.</p>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.header-buttons a').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const file = this.getAttribute('data-file');
+                fetch(file)
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('dynamic-content').innerHTML = html;
+                    })
+                    .catch(error => console.error('Error al cargar el contenido:', error));
+            });
+        });
+    </script>
 </body>
 </html>
 
