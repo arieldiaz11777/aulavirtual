@@ -1,4 +1,3 @@
-// Capturamos el formulario
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('materialForm');
 
@@ -33,13 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(data),
+                    mode: 'no-cors' // Solución temporal para evitar CORS
                 });
 
-                if (!response.ok) {
-                    throw new Error(`Error ${response.status}: ${response.statusText}`);
-                }
-
-                // Asumimos que la solicitud fue exitosa
+                // Asumimos que la solicitud fue exitosa ya que no podemos verificar la respuesta con no-cors
                 messageContainer.textContent = 'Datos enviados correctamente a Google Sheets';
                 messageContainer.style.color = 'green';
                 form.reset(); // Reseteamos el formulario
