@@ -30,6 +30,11 @@ window.onload = () => {
             })
             .then(data => {
                 contentDiv.innerHTML = `<div class="auto-adjustable-container">${data}</div>`;
+                // Aplicar el CSS específico del contenido cargado
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = `../${filePath.replace('.html', '/styles.css')}`;
+                document.head.appendChild(link);
             })
             .catch(error => {
                 contentDiv.innerHTML = `<div class="auto-adjustable-container"><p>Error al cargar el contenido: ${error.message}</p></div>`;
@@ -39,20 +44,12 @@ window.onload = () => {
     // No mostrar contenido inicial
     contentDiv.innerHTML = '';
 
-    // Cargar contenido de materiales/index.html al presionar el botón "Materiales"
-    document.querySelector('a[data-file="materiales/index.html"]').addEventListener('click', (event) => {
-        event.preventDefault();
-        loadContent('materiales/index.html');
-    });
-
-    // Provisional: Cargar contenido de ejemplo para los demás botones
+    // Cargar contenido dinámico al presionar los botones del encabezado
     document.querySelectorAll('.header-buttons a').forEach(button => {
         button.addEventListener('click', (event) => {
             event.preventDefault();
             const filePath = event.target.getAttribute('data-file');
-            if (filePath !== 'materiales/index.html') {
-                contentDiv.innerHTML = `<div class="auto-adjustable-container"><h1>Contenido de ${filePath}</h1><p>Este es un contenido provisional para ${filePath}.</p></div>`;
-            }
+            loadContent(filePath);
         });
     });
 };
