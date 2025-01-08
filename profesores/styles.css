@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-}
+} 
 
 body {
     font-family: Arial, sans-serif;
@@ -80,7 +80,7 @@ body {
     top: 0;
     left: 50%; /* Centrar horizontalmente */
     transform: translateX(-50%); /* Ajustar posición */
-    width: calc(100% - 40px); /* Ajustar ancho */
+    width: 90%; /* Ajustar ancho al 90% */
     z-index: 1000; /* Asegurar que el encabezado esté sobre otro contenido */
     gap: 20px; /* Añadir espacio entre botones */
 }
