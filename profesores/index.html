@@ -7,35 +7,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container" style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+    <div class="container">
+        <!-- Encabezado -->
+        <div class="header">
+            <div class="profile">
+                <img id="profile-pic" src="" alt="Foto de perfil">
+                <div>
+                    <h3 id="user-name">Nombre de Usuario</h3>
+                    <p id="user-email">correo@ejemplo.com</p>
+                </div>
+            </div>
+            <div class="header-buttons">
+                <a href="#" data-file="inicio.html">Inicio</a>
+                <a href="#" data-file="alumnos/index.html">Alumnos</a>
+                <a href="#" data-file="materiales/index.html">Materiales</a>
+                <a href="#" data-file="evaluaciones.html">Evaluaciones</a>
+                <a href="#" id="logout-button">Cerrar Sesión</a>
+            </div>
+        </div>
+
         <!-- Contenido Principal -->
         <div class="main-content">
-            <!-- Encabezado -->
-            <div class="header" style="position: fixed; width: 90%; top: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;">
-                <div class="profile">
-                    <img id="profile-pic" src="" alt="Foto de perfil">
-                    <div>
-                        <h3 id="user-name">Nombre de Usuario</h3>
-                        <p id="user-email">correo@ejemplo.com</p>
-                    </div>
-                </div>
-                <!-- Mover botones al encabezado -->
-                <div class="header-buttons">
-                    <a href="#" data-file="inicio.html">Inicio</a>
-                    <a href="#" data-file="alumnos/index.html">Alumnos</a>
-                    <a href="#" data-file="materiales/index.html">Materiales</a>
-                    <a href="#" data-file="evaluaciones.html">Evaluaciones</a>
-                    <a href="#" id="logout-button">Cerrar Sesión</a>
-                </div>
-            </div>
-
-            <!-- Contenido dinámico -->
-            <div class="content" id="dynamic-content" style="margin-top: 100px; overflow-y: auto;">
-                <div class="auto-adjustable-container">
-                    <h1>Bienvenido al Aula Virtual</h1>
-                    <p>Aquí encontrarás tus clases, tareas y recursos educativos.</p>
-                </div>
-            </div>
+            <h1>Bienvenido al Aula Virtual</h1>
+            <p>Aquí encontrarás tus clases, tareas y recursos educativos.</p>
         </div>
     </div>
 
