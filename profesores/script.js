@@ -72,6 +72,11 @@ window.onload = () => {
                 data[key] = value;
             });
 
+            // Contenedor para mostrar mensajes
+            const messageContainer = document.createElement('div');
+            messageContainer.id = 'message-container';
+            form.appendChild(messageContainer);
+
             try {
                 // Enviar los datos al script de Google Apps
                 const response = await fetch('https://script.google.com/macros/s/AKfycbyv6LvoNr8sQJwbSU2zGoZRb8Cikj0nCnnQvI0U1K5Vry-_Bduw4IEVapN3lP7VLWdd/exec', {
@@ -88,10 +93,13 @@ window.onload = () => {
 
                 const result = await response.json();
                 console.log('Success:', result);
-                alert('Datos enviados con éxito');
+                messageContainer.textContent = 'Datos enviados con éxito';
+                messageContainer.style.color = 'green';
+                form.reset(); // Reseteamos el formulario
             } catch (error) {
                 console.error('Error:', error);
-                alert('Error al enviar los datos');
+                messageContainer.textContent = 'Error al enviar los datos';
+                messageContainer.style.color = 'red';
             }
         });
     }
