@@ -1,5 +1,18 @@
-// Capturamos el formulario
+// Capturamos el formulario y el contenedor de mensajes
 const form = document.getElementById('materialForm');
+const messageContainer = document.getElementById('formMessage');
+
+// Obtener el usuario desde localStorage
+const user = JSON.parse(localStorage.getItem('user'));
+
+// Rellenar automáticamente el email si el usuario está logueado
+if (user && user.email) {
+    document.getElementById('email').value = user.email;
+} else {
+    // Redireccionar al inicio de sesión si no hay usuario logueado
+    window.location.href = '../index.html';
+}
+
 
 // Agregamos un evento al enviar el formulario
 form.addEventListener('submit', async (e) => {
@@ -26,17 +39,17 @@ form.addEventListener('submit', async (e) => {
             mode: 'no-cors' // Solución temporal para evitar CORS
         });
 
-
-        const result = await response.json();
-
-        // Validamos la respuesta
-        if (result.status === 'success') {
-            alert('Datos enviados correctamente a Google Sheets');
-            form.reset(); // Reseteamos el formulario
-        } else {
-            alert('Error al enviar los datos');
-        }
+        // Mostramos el mensaje de éxito
+        showMessage('Datos enviados correctamente a Google Sheets', 'success');
+        form.reset(); // Reseteamos el formulario
     } catch (error) {
-        alert('Hubo un error: ' + error.message);
+        // Mostramos el mensaje de error
+        showMessage('Hubo un error: ' + error.message, 'error');
     }
 });
+
+// Función para mostrar mensajes
+function showMessage(message, type) {
+    messageContainer.textContent = message;
+    messageContainer.className = `form-message ${type}`;
+}

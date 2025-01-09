@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cargar Materiales</title>
-  <link rel="stylesheet" href="../static/css/materiales.css">
+  <link rel="stylesheet" href="/static/css/materiales.css">
 </head>
 
 <body>
@@ -36,12 +36,16 @@
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
+        <input type="email" id="email" name="email" readonly>
+      </div>      
     </div>
     <button type="submit">Enviar</button>
+
+    <!-- Contenedor para mostrar los mensajes -->
+    <div id="formMessage" class="form-message"></div>
   </form>
-  <script src="../static/js/materiales.js"></script>
+
+  <script src="/static/js/materiales.js"></script>
 </body>
 
 </html>
