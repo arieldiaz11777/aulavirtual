@@ -1,6 +1,24 @@
 // Capturamos el formulario
 const form = document.getElementById('materialForm');
 
+// Al cargar la página
+window.onload = () => {
+    // Recuperar los datos del usuario logueado desde localStorage
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    // Verificar si hay un usuario en sesión
+    if (user) {
+        // Autorrellenar el campo email si existe
+        const emailField = document.getElementById('email');
+        if (emailField) {
+            emailField.value = user.email;
+        }
+    } else {
+        // Si no hay usuario en sesión, redirigir a la página principal
+        window.location.href = '../index.html';
+    }
+};
+
 // Agregamos un evento al enviar el formulario
 form.addEventListener('submit', async (e) => {
     e.preventDefault(); // Prevenimos el comportamiento por defecto
@@ -12,9 +30,11 @@ form.addEventListener('submit', async (e) => {
         video: document.getElementById('video').value,
         materiales: document.getElementById('materiales').value,
         fechaClase: document.getElementById('fechaClase').value,
-        email: document.getElementById('email').value,
+        email: document.getElementById('email').value, // Autorrellenado previamente
     };
 
+    console.log("Email enviado:", data.email);
+    
     // Contenedor para mostrar mensajes
     let messageContainer = document.getElementById('message-container');
     if (!messageContainer) {
