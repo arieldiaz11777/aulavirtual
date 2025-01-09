@@ -147,6 +147,15 @@ form {
     /* Ajustar este valor para mover el formulario hacia arriba o abajo */
 }
 
+form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .form-row {
     display: flex;
     gap: 15px;

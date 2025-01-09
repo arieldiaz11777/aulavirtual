@@ -14,7 +14,34 @@
     <div class="form-row">
       <div class="form-group">
         <label for="curso">Curso:</label>
-        <input type="text" id="curso" name="curso" required>
+        <select id="curso" name="curso" required>
+          <option value="" disabled selected>Seleccionar el curso</option>
+          <option value="Neumatica Modulo I">Neumatica Modulo I</option>
+          <option value="Neumatica Modulo II">Neumatica Modulo II</option>
+          <option value="Neumatica Modulo III">Neumatica Modulo III</option>
+          <option value="Mecanica del Automotor Modulo I">Mecanica del Automotor Modulo I</option>
+          <option value="Mecanica del Automotor Modulo II">Mecanica del Automotor Modulo II</option>
+          <option value="Mecanica del Automotor Modulo III">Mecanica del Automotor Modulo III</option>
+          <option value="Mecanica del Automotor Modulo IIII">Mecanica del Automotor Modulo IIII</option>
+          <option value="Cajas Automaticas Modulo I">Cajas Automaticas Modulo I</option>
+          <option value="Cajas Automaticas Modulo II">Cajas Automaticas Modulo II</option>
+          <option value="Cajas Automaticas Modulo III">Cajas Automaticas Modulo III</option>
+          <option value="Hidraulica Modulo I">Hidraulica Modulo I</option>
+          <option value="Hidraulica Modulo II">Hidraulica Modulo II</option>
+          <option value="Hidraulica Modulo III">Hidraulica Modulo III</option>
+          <option value="Electronica del Automotor Modulo I">Electronica del Automotor Modulo I</option>
+          <option value="Electronica del Automotor Modulo II">Electronica del Automotor Modulo II</option>
+          <option value="Electronica del Automotor Modulo III">Electronica del Automotor Modulo III</option>
+          <option value="Soldadura Modulo I">Soldadura Modulo I</option>
+          <option value="Soldadura Modulo II">Soldadura Modulo II</option>
+          <option value="Soldadura Modulo III">Soldadura Modulo III</option>
+          <option value="Inyeccion Electronica Modulo I">Inyeccion Electronica Modulo I</option>
+          <option value="Inyeccion Electronica Modulo II">Inyeccion Electronica Modulo II</option>
+          <option value="Inyeccion Electronica Modulo III">Inyeccion Electronica Modulo III</option>
+          <option value="Mecatronica Modulo I">Mecatronica Modulo I</option>
+          <option value="Mecatronica Modulo II">Mecatronica Modulo II</option>
+          <option value="Mecatronica Modulo III">Mecatronica Modulo III</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="numeroClase">Número de Clase:</label>
@@ -42,6 +69,17 @@
     <button type="submit">Enviar</button>
     <div id="message-container"></div> <!-- Contenedor para mensajes -->
   </form>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = JSON.parse(localStorage.getItem('user'));
+      if (user) {
+        document.getElementById('email').value = user.email;
+      } else {
+        // Redirigir al usuario a la página de inicio de sesión si no está logueado
+        window.location.href = '../index.html';
+      }
+    });
+  </script>
   <script src="../static/js/materiales.js"></script>
 </body>
 
