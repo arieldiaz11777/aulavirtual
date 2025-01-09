@@ -2,6 +2,9 @@
 const form = document.getElementById('materialForm');
 const messageContainer = document.getElementById('formMessage');
 
+// Capturamos el contenedor de la animación de espera
+const loadingSpinner = document.getElementById('loadingSpinner');
+
 // Obtener el usuario desde localStorage
 const user = JSON.parse(localStorage.getItem('user'));
 
@@ -17,6 +20,9 @@ if (user && user.email) {
 // Agregamos un evento al enviar el formulario
 form.addEventListener('submit', async (e) => {
     e.preventDefault(); // Prevenimos el comportamiento por defecto
+
+    // Mostrar la animación de espera
+    loadingSpinner.style.display = 'block';
 
     // Capturamos los valores del formulario
     const data = {
@@ -39,10 +45,16 @@ form.addEventListener('submit', async (e) => {
             mode: 'no-cors' // Solución temporal para evitar CORS
         });
 
+        // Ocultar la animación de espera
+        loadingSpinner.style.display = 'none';
+
         // Mostramos el mensaje de éxito
         showMessage('Datos enviados correctamente a Google Sheets', 'success');
         form.reset(); // Reseteamos el formulario
     } catch (error) {
+        // Ocultar la animación de espera
+        loadingSpinner.style.display = 'none';
+
         // Mostramos el mensaje de error
         showMessage('Hubo un error: ' + error.message, 'error');
     }
