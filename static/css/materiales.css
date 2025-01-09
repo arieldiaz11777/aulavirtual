@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     height: 100vh;
-    background: url("/foto.png") center center / cover no-repeat fixed;
+    background: url("/static/foto.png") center center / cover no-repeat fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
