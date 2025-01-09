@@ -14,21 +14,48 @@
     <div class="form-row">
       <div class="form-group">
         <label for="curso">Curso:</label>
-        <input type="text" id="curso" name="curso" required>
+        <select id="curso" name="curso" required>
+          <option value="" disabled selected>Seleccione el curso</option>
+          <option value="Neumatica Modulo I">Neumatica Modulo I</option>
+          <option value="Neumatica Modulo II">Neumatica Modulo II</option>
+          <option value="Neumatica Modulo III">Neumatica Modulo III</option>
+          <option value="Mecanica del Automotor Modulo I">Mecanica del Automotor Modulo I</option>
+          <option value="Mecanica del Automotor Modulo II">Mecanica del Automotor Modulo II</option>
+          <option value="Mecanica del Automotor Modulo III">Mecanica del Automotor Modulo III</option>
+          <option value="Mecanica del Automotor Modulo IIII">Mecanica del Automotor Modulo IIII</option>
+          <option value="Cajas Automaticas Modulo I">Cajas Automaticas Modulo I</option>
+          <option value="Cajas Automaticas Modulo II">Cajas Automaticas Modulo II</option>
+          <option value="Cajas Automaticas Modulo III">Cajas Automaticas Modulo III</option>
+          <option value="Hidraulica Modulo I">Hidraulica Modulo I</option>
+          <option value="Hidraulica Modulo II">Hidraulica Modulo II</option>
+          <option value="Hidraulica Modulo III">Hidraulica Modulo III</option>
+          <option value="Electronica del Automotor Modulo I">Electronica del Automotor Modulo I</option>
+          <option value="Electronica del Automotor Modulo II">Electronica del Automotor Modulo II</option>
+          <option value="Electronica del Automotor Modulo III">Electronica del Automotor Modulo III</option>
+          <option value="Soldadura Modulo I">Soldadura Modulo I</option>
+          <option value="Soldadura Modulo II">Soldadura Modulo II</option>
+          <option value="Soldadura Modulo III">Soldadura Modulo III</option>
+          <option value="Inyeccion Electronica Modulo I">Inyeccion Electronica Modulo I</option>
+          <option value="Inyeccion Electronica Modulo II">Inyeccion Electronica Modulo II</option>
+          <option value="Inyeccion Electronica Modulo III">Inyeccion Electronica Modulo III</option>
+          <option value="Mecatronica Modulo I">Mecatronica Modulo I</option>
+          <option value="Mecatronica Modulo II">Mecatronica Modulo II</option>
+          <option value="Mecatronica Modulo III">Mecatronica Modulo III</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="numeroClase">Número de Clase:</label>
-        <input type="number" id="numeroClase" name="numeroClase" required>
+        <input type="number" id="numeroClase" name="numeroClase" required placeholder="Ingrese el número de la clase">
       </div>
       <div class="form-group">
         <label for="video">Video (URL):</label>
-        <input type="url" id="video" name="video" required>
+        <input type="url" id="video" name="video" required placeholder="Ingrese la URL del video">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group">
         <label for="materiales">Materiales:</label>
-        <textarea id="materiales" name="materiales" required></textarea>
+        <textarea id="materiales" name="materiales" required placeholder="Describa los materiales proporcionados"></textarea>
       </div>
       <div class="form-group">
         <label for="fechaClase">Fecha de Clase:</label>
@@ -36,7 +63,7 @@
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" readonly>
+        <input type="email" id="email" name="email" readonly >
       </div>      
     </div>
     <button type="submit">Enviar</button>

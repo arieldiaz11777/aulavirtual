@@ -52,4 +52,5 @@ form.addEventListener('submit', async (e) => {
 function showMessage(message, type) {
     messageContainer.textContent = message;
     messageContainer.className = `form-message ${type}`;
+    messageContainer.style.display = 'block';
 }
