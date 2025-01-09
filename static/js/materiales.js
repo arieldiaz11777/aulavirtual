@@ -50,7 +50,12 @@ form.addEventListener('submit', async (e) => {
 
         // Mostramos el mensaje de éxito
         showMessage('Datos enviados correctamente a Google Sheets', 'success');
-        form.reset(); // Reseteamos el formulario
+        
+        // Reseteamos el formulario y volvemos a rellenar el email
+        form.reset();
+        if (user && user.email) {
+            document.getElementById('email').value = user.email;
+        }
     } catch (error) {
         // Ocultar la animación de espera
         loadingSpinner.style.display = 'none';
