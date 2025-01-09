@@ -69,17 +69,6 @@
     <button type="submit">Enviar</button>
     <div id="message-container"></div> <!-- Contenedor para mensajes -->
   </form>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const user = JSON.parse(localStorage.getItem('user'));
-      if (user) {
-        document.getElementById('email').value = user.email;
-      } else {
-        // Redirigir al usuario a la página de inicio de sesión si no está logueado
-        window.location.href = '../index.html';
-      }
-    });
-  </script>
   <script src="../static/js/materiales.js"></script>
 </body>
 
