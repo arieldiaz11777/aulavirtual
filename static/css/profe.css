@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     height: 100vh;
-    background: url("/static/foto.png") center center / cover no-repeat fixed;
+    background: url("https://arieldiaz11777.github.io/aulavirtual/static/foto.png") center center / cover no-repeat fixed;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centrar verticalmente */
