@@ -49,7 +49,7 @@ form.addEventListener('submit', async (e) => {
         loadingSpinner.style.display = 'none';
 
         // Mostramos el mensaje de éxito
-        showMessage('Datos enviados correctamente a Google Sheets', 'success');
+        showMessage('Datos enviados correctamente !!', 'success');
         
         // Reseteamos el formulario y volvemos a rellenar el email
         form.reset();
